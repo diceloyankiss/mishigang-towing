@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://diceloyankiss.github.io/mishigang-towing/sitemap.xml
