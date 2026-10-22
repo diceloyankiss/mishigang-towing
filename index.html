@@ -70,7 +70,7 @@ footer a{color:inherit}
 :root{--asfalto:#e3e4e0;--tinta:#15171c;--ambar:#f5a700;--oscuro:#1b1d22}
 html.js body{background:var(--asfalto);overflow-x:clip}
 .vl-pre,.vl-hero,.vl-nav,.vl-s2-wrap,.vl-gal{font-family:'Inter',sans-serif}
-.vl-pre{display:none;position:fixed;inset:0;z-index:100;background:var(--tinta);align-items:center;justify-content:center;color:#fff;font:700 2.6rem 'Syne',sans-serif;letter-spacing:-.02em;transition:transform 1.1s cubic-bezier(.45,0,.15,1)}
+.vl-pre{display:none;position:fixed;inset:0;z-index:100;background:var(--tinta);align-items:center;justify-content:center;color:#fff;font:700 clamp(1.5rem,6vw,2.6rem) 'Syne',sans-serif;letter-spacing:-.02em;white-space:nowrap;transition:transform 1.1s cubic-bezier(.45,0,.15,1)}
 .js .vl-pre{display:flex}
 .vl-pre.lift{transform:translateY(-100%)}.vl-pre.parked{display:none}
 .vl-type .dot{color:var(--ambar);font-weight:800}
@@ -140,6 +140,9 @@ html.js body{background:var(--asfalto);overflow-x:clip}
 .vl-tile:hover{flex:none;transform:scale(1.02)}
 .vl-tile:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 4px);justify-self:center}}
 @media(prefers-reduced-motion:reduce){.vl-ticker-track{animation:none}.vl-pre{display:none!important}.js .vl-hero-text{opacity:1;transform:none}.vl-tile,.vl-truck-in{transition:none}}
+
+.vl-logo b{font-weight:400}
+@media(max-width:420px){.vl-logo{font-size:1.08rem}.vl-pill-num{display:none}.vl-callpill{padding:9px 13px}}
 
 .vl-tile{background:#2a2d33}
 .vl-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
@@ -215,10 +218,10 @@ body{font-family:'Inter',sans-serif;color:var(--tinta)}
 
 <!-- Navigation -->
 <nav class="vl-nav" id="vlNav">
-  <a class="vl-logo" href="./" aria-label="Mishigang Towing">Mishigang<span>.</span></a>
+  <a class="vl-logo" href="./" aria-label="Mishigang Towing">Mishigang <b>Towing</b><span>.</span></a>
   <div class="vl-nav-right">
     <button class="vl-lang" id="langBtn" type="button" aria-label="Cambiar idioma / Change language">ES / EN</button>
-    <a class="vl-callpill" data-track="call" href="tel:+18137852827"><i class="bi bi-telephone-fill"></i> (813) 785-2827</a>
+    <a class="vl-callpill" data-track="call" href="tel:+18137852827" aria-label="(813) 785-2827"><i class="bi bi-telephone-fill"></i><span class="vl-pill-num"> (813) 785-2827</span></a>
   </div>
 </nav>
 
@@ -294,7 +297,7 @@ body{font-family:'Inter',sans-serif;color:var(--tinta)}
 
 <!-- Service gallery -->
 <section class="vl-gal" id="vlGal">
-  <div class="vl-ticker" aria-hidden="true"><div class="vl-ticker-track"><span>Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;</span><span>Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;</span></div></div>
+  <div class="vl-ticker" aria-hidden="true"><div class="vl-ticker-track"><span>Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;</span><span>Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;Mishigang Towing&nbsp;&nbsp;·&nbsp;&nbsp;</span></div></div>
   <div class="vl-gal-content">
     <h2 class="visually-hidden"><span data-l="es">Servicios</span><span data-l="en">Services</span></h2>
     <div class="vl-row">
@@ -403,9 +406,9 @@ body{font-family:'Inter',sans-serif;color:var(--tinta)}
   }
   if (reduce || seen) { pre.classList.add('parked'); startReveal(true); }
   else {
-    var word = 'Mishigang.', i = 0, step = 90, startAt = 400;
+    var word = 'Mishigang Towing.', i = 0, step = 65, startAt = 350;
     for (let k = 0; k < word.length; k++) setTimeout(function(){
-      var ch = word[k]; typeEl.innerHTML += ch === '.' ? '<span class="dot">.</span>' : ch;
+      var ch = word[k]; typeEl.innerHTML += ch === '.' ? '<span class="dot">.</span>' : (ch === ' ' ? '&nbsp;' : ch);
     }, startAt + k * step);
     var lift = startAt + word.length * step + 450;
     setTimeout(function(){ caret.style.display = 'none'; }, lift - 150);
