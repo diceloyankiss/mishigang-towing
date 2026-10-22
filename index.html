@@ -210,6 +210,19 @@ body{font-family:'Inter',sans-serif;color:var(--tinta)}
 @media(max-width:1023px){.vl-s2-wrap{height:190vh}}
 @media(max-width:860px){.vl-how-grid,.vl-faq-grid{grid-template-columns:1fr;gap:8px}.vl-btn-dark{width:100%;justify-content:center}}
 @media(min-width:768px){.vl-foot{padding-bottom:48px}}
+
+.vl-local{background:var(--asfalto);padding:clamp(72px,10vw,140px) 0 clamp(64px,8vw,110px);position:relative;z-index:26}
+.vl-local-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:clamp(24px,5vw,80px);align-items:start}
+.vl-local-lead{font-size:clamp(18px,1.5vw,21px);line-height:1.55;margin:0 0 22px;max-width:40rem}
+.vl-local-tip{display:flex;gap:12px;margin:0;padding:18px 20px;background:#fff;border-left:4px solid var(--ambar);border-radius:6px;line-height:1.55;max-width:40rem}
+.vl-local-tip i{color:var(--ambar);font-size:1.2rem}
+.vl-facts{margin:0}
+.vl-facts div{padding:16px 0;border-top:1px solid rgba(21,23,28,.15)}
+.vl-facts div:last-child{border-bottom:1px solid rgba(21,23,28,.15)}
+.vl-facts dt{font:600 .85rem 'Inter',sans-serif;color:rgba(21,23,28,.6);margin-bottom:4px}
+.vl-facts dd{margin:0;font:700 1.05rem/1.4 'Inter',sans-serif}
+.vl-cities a[aria-current]{color:var(--ambar)}
+@media(max-width:860px){.vl-local-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -338,7 +351,7 @@ body{font-family:'Inter',sans-serif;color:var(--tinta)}
   <div class="vl-wrap">
     <h2 class="vl-h2"><span data-l="es">Dónde trabajamos</span><span data-l="en">Where we work</span></h2>
     <p class="vl-lead"><span data-l="es">Hasta 40 millas alrededor de Tampa, incluidas I-275, I-4, I-75, Dale Mabry Hwy y Hillsborough Ave.</span><span data-l="en">Up to 40 miles around Tampa, including I-275, I-4, I-75, Dale Mabry Hwy and Hillsborough Ave.</span></p>
-    <nav class="vl-cities" aria-label="Ciudades"><a href="./">Tampa</a><a href="brandon">Brandon</a><a href="riverview">Riverview</a><a href="wesley-chapel">Wesley Chapel</a><a href="clearwater">Clearwater</a><a href="st-petersburg">St. Petersburg</a><a href="plant-city">Plant City</a><a href="lakeland">Lakeland</a></nav>
+    <nav class="vl-cities" aria-label="Ciudades"><a href="./" aria-current="page">Tampa</a><a href="brandon">Brandon</a><a href="riverview">Riverview</a><a href="wesley-chapel">Wesley Chapel</a><a href="clearwater">Clearwater</a><a href="st-petersburg">St. Petersburg</a><a href="plant-city">Plant City</a><a href="lakeland">Lakeland</a></nav>
     <p class="vl-more"><span data-l="es">También</span><span data-l="en">Also</span>: Valrico, Seffner, Temple Terrace, Carrollwood, Town 'n' Country, Lutz, Land O' Lakes, Zephyrhills, Odessa, Oldsmar, Ruskin, Apollo Beach, Gibsonton, Largo, Pinellas Park, Palm Harbor, Dunedin, New Port Richey.</p>
   </div>
 </section>
@@ -359,6 +372,7 @@ body{font-family:'Inter',sans-serif;color:var(--tinta)}
   <div class="vl-wrap vl-faq-grid">
     <h2 class="vl-h2"><span data-l="es">Preguntas frecuentes</span><span data-l="en">Frequently asked questions</span></h2>
     <div>
+      
       <details><summary><span data-l="es">¿Cuánto cuesta una grúa?</span><span data-l="en">How much does a tow cost?</span></summary><p><span data-l="es">Depende de la distancia, el tipo de carro y la situación. Te damos el precio por teléfono antes de enviar la grúa, y tú decides.</span><span data-l="en">It depends on distance, vehicle type and the situation. We give you the price by phone before sending the truck, and you decide.</span></p></details>
       <details><summary><span data-l="es">¿Quién hace el remolque?</span><span data-l="en">Who does the towing?</span></summary><p><span data-l="es">Somos un despacho. El remolque lo hace un operador de grúa independiente de la zona, con su propia licencia y seguro.</span><span data-l="en">We are a dispatch service. The tow is done by an independent local operator with their own license and insurance.</span></p></details>
       <details><summary><span data-l="es">¿Hasta dónde llegan?</span><span data-l="en">How far do you go?</span></summary><p><span data-l="es">Trabajamos hasta unas 40 millas alrededor de Tampa. Llámanos con tu ubicación y te confirmamos si hay grúa disponible.</span><span data-l="en">We work up to about 40 miles around Tampa. Call us with your location and we confirm if a truck is available.</span></p></details>
