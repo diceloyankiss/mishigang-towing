@@ -97,8 +97,8 @@ html.js body{background:var(--asfalto);overflow-x:clip}
 .vl-big{margin:0;padding:0 clamp(16px,4vw,64px);font:800 clamp(80px,11vw,200px) 'Syne',sans-serif;text-transform:uppercase;letter-spacing:-.04em;line-height:.88;color:var(--tinta);white-space:nowrap}
 .vl-cta{display:flex;flex-wrap:wrap;gap:12px;padding:clamp(20px,3vw,36px) clamp(16px,4vw,64px) 0}
 .vl-cta .btn{margin:0}
-@media(max-width:1023px){.vl-sub-d{display:none}.vl-sub-m{display:block}.vl-top{justify-content:flex-start}.vl-own{font-size:4vw}.vl-hero-text{padding-top:110px}.vl-big{font-size:clamp(64px,21vw,200px);white-space:normal;line-height:.9}}
-@media(max-width:639px){.vl-big{font-size:22vw}.vl-own{font-size:5.2vw}.vl-hero-text{padding-top:90px}.vl-callpill{padding:8px 12px;font-size:.85rem}.vl-lang{padding:6px 9px}.vl-cta{flex-direction:column}.vl-cta .btn{width:100%}}
+@media(max-width:1023px){.vl-sub-d{display:none}.vl-sub-m{display:block}.vl-top{justify-content:flex-start}.vl-own{font-size:4vw}.vl-hero-text{padding-top:110px}.vl-big{font-size:11vw}}
+@media(max-width:639px){.vl-big{font-size:18.5vw;white-space:normal;line-height:.92}.vl-own{font-size:5.2vw}.vl-hero-text{padding-top:90px}.vl-callpill{padding:8px 12px;font-size:.85rem}.vl-lang{padding:6px 9px}.vl-cta{flex-direction:column}.vl-cta .btn{width:100%}}
 .vl-truck{position:fixed;z-index:22;bottom:0;left:0;width:100%;pointer-events:none;will-change:transform;display:none}
 .js .vl-truck{display:block}
 .vl-truck-in{transform:translateY(102vh);will-change:transform}
@@ -140,6 +140,63 @@ html.js body{background:var(--asfalto);overflow-x:clip}
 .vl-tile:hover{flex:none;transform:scale(1.02)}
 .vl-tile:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 4px);justify-self:center}}
 @media(prefers-reduced-motion:reduce){.vl-ticker-track{animation:none}.vl-pre{display:none!important}.js .vl-hero-text{opacity:1;transform:none}.vl-tile,.vl-truck-in{transition:none}}
+
+body{font-family:'Inter',sans-serif;color:var(--tinta)}
+.vl-nav{transition:color .35s ease,background-color .35s ease,box-shadow .35s ease}
+.vl-nav.solid{background:rgba(227,228,224,.9);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:0 1px 0 rgba(21,23,28,.08);padding-top:12px;padding-bottom:12px}
+.vl-nav.solid.on-dark{background:rgba(27,29,34,.9);box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.vl-big{margin-top:.14em}
+.vl-trust{display:flex;flex-wrap:wrap;gap:8px 22px;list-style:none;margin:0;padding:18px clamp(16px,4vw,64px) 0;font:600 .92rem 'Inter',sans-serif;color:rgba(21,23,28,.75)}
+.vl-trust i{color:var(--tinta);margin-right:6px}
+.vl-wrap{max-width:1200px;margin:0 auto;padding-left:clamp(16px,4vw,64px);padding-right:clamp(16px,4vw,64px)}
+.vl-h2{font:800 clamp(32px,4.4vw,64px)/1 'Syne',sans-serif;letter-spacing:-.03em;margin:0 0 .5em}
+.vl-how{background:var(--asfalto);padding:clamp(72px,10vw,140px) 0 clamp(56px,7vw,96px);position:relative;z-index:26}
+.vl-how-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(24px,5vw,80px);align-items:start}
+.vl-steps{list-style:none;margin:0;padding:0}
+.vl-steps li{display:flex;gap:22px;padding:22px 0;border-top:1px solid rgba(21,23,28,.15)}
+.vl-steps li:last-child{border-bottom:1px solid rgba(21,23,28,.15)}
+.vl-step-n{font:800 clamp(36px,3.6vw,52px)/.9 'Syne',sans-serif;color:var(--ambar);-webkit-text-stroke:1px var(--tinta);min-width:1.1em}
+.vl-steps h3{font:700 clamp(18px,1.6vw,22px)/1.25 'Inter',sans-serif;margin:0 0 4px}
+.vl-steps p{margin:0;color:rgba(21,23,28,.7);font-size:1rem;line-height:1.5}
+.vl-ready{margin-top:clamp(40px,5vw,64px);display:flex;flex-wrap:wrap;align-items:center;gap:14px 40px}
+.vl-ready-t{margin:0;font:700 1rem 'Inter',sans-serif}
+.vl-ready ul{display:flex;flex-wrap:wrap;gap:10px 28px;list-style:none;margin:0;padding:0;color:rgba(21,23,28,.75)}
+.vl-ready i{color:var(--tinta);margin-right:8px}
+.vl-area{background:var(--oscuro);color:#fff;padding:clamp(72px,10vw,140px) 0;position:relative;z-index:26}
+.vl-lead{max-width:44rem;font-size:clamp(17px,1.4vw,20px);line-height:1.55;color:rgba(255,255,255,.7);margin:0 0 clamp(28px,4vw,48px)}
+.vl-cities{display:flex;flex-wrap:wrap;gap:6px 28px;margin-bottom:28px}
+.vl-cities a{font:800 clamp(26px,3.4vw,50px)/1.15 'Syne',sans-serif;letter-spacing:-.02em;color:#fff;text-decoration:none;border-bottom:3px solid transparent;transition:color .2s,border-color .2s}
+.vl-cities a:hover,.vl-cities a:focus-visible{color:var(--ambar);border-color:var(--ambar);outline:none}
+.vl-more{max-width:60rem;color:rgba(255,255,255,.55);line-height:1.7;margin:0}
+.vl-biz{background:var(--ambar);padding:clamp(56px,7vw,96px) 0;position:relative;z-index:26}
+.vl-biz-grid{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:28px}
+.vl-biz .vl-h2{margin-bottom:.3em}
+.vl-biz p{max-width:36rem;margin:0;font-size:clamp(17px,1.4vw,20px);line-height:1.5}
+.vl-btn-dark{display:inline-flex;align-items:center;gap:10px;background:var(--tinta);color:#fff;text-decoration:none;font:700 1.2rem 'Inter',sans-serif;padding:18px 28px;border-radius:999px;white-space:nowrap}
+.vl-btn-dark:hover{background:#000;color:var(--ambar)}
+.vl-faq{background:var(--asfalto);padding:clamp(72px,10vw,140px) 0;position:relative;z-index:26}
+.vl-faq-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:clamp(24px,5vw,80px);align-items:start}
+.vl-faq details{border-top:1px solid rgba(21,23,28,.15)}
+.vl-faq details:last-child{border-bottom:1px solid rgba(21,23,28,.15)}
+.vl-faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font:700 clamp(17px,1.5vw,20px)/1.3 'Inter',sans-serif}
+.vl-faq summary::-webkit-details-marker{display:none}
+.vl-faq summary::after{content:"+";font:400 28px/1 'Inter',sans-serif;transition:transform .25s}
+.vl-faq details[open] summary::after{transform:rotate(45deg)}
+.vl-faq details p{margin:0 0 22px;max-width:40rem;color:rgba(21,23,28,.75);line-height:1.6}
+.vl-faq summary:focus-visible{outline:3px solid var(--ambar);outline-offset:2px}
+.vl-end{background:var(--tinta);color:#fff;padding:clamp(80px,11vw,160px) 0 0;position:relative;z-index:26}
+.vl-end-q{font:700 clamp(18px,1.8vw,24px) 'Inter',sans-serif;color:rgba(255,255,255,.7);margin:0 0 8px}
+.vl-end-phone{display:inline-block;font:800 clamp(34px,9.6vw,128px)/.95 'Syne',sans-serif;letter-spacing:-.04em;color:var(--ambar);text-decoration:none;white-space:nowrap}.vl-end-phone span{display:block}
+.vl-end-phone:hover{color:#ffbb2e}
+.vl-end-wa{display:inline-flex;gap:8px;align-items:center;margin-top:22px;color:#fff;font:600 1.1rem 'Inter',sans-serif;text-decoration:underline;text-underline-offset:4px}
+.vl-end-wa:hover{color:#25d366}
+.vl-foot{padding-top:clamp(64px,8vw,110px);padding-bottom:110px;color:rgba(255,255,255,.5);font-size:.9rem;line-height:1.6}
+.vl-foot-links{display:flex;flex-wrap:wrap;gap:6px 22px;padding-top:28px;border-top:1px solid rgba(255,255,255,.12);margin-bottom:18px}
+.vl-foot a{color:rgba(255,255,255,.75)}
+.vl-foot a:hover{color:var(--ambar)}
+.vl-foot p{margin:0 0 8px;max-width:52rem}
+@media(max-width:860px){.vl-how-grid,.vl-faq-grid{grid-template-columns:1fr;gap:8px}.vl-btn-dark{width:100%;justify-content:center}}
+@media(min-width:768px){.vl-foot{padding-bottom:48px}}
 </style>
 </head>
 <body>
@@ -169,6 +226,11 @@ html.js body{background:var(--asfalto);overflow-x:clip}
       <a class="btn btn-primary btn-xl" data-track="call" href="tel:+18137852827"><i class="bi bi-telephone-fill"></i> <span data-l="es">Llamar</span><span data-l="en">Call</span> (813) 785-2827</a>
       <a class="btn btn-wa btn-xl" data-track="whatsapp" href="https://wa.me/18137852827"><i class="bi bi-whatsapp"></i> <span data-l="es">Pedir por WhatsApp</span><span data-l="en">Request on WhatsApp</span></a>
     </div>
+    <ul class="vl-trust">
+      <li><i class="bi bi-cash-coin"></i><span data-l="es">Precio confirmado antes</span><span data-l="en">Price confirmed upfront</span></li>
+      <li><i class="bi bi-geo-alt-fill"></i><span data-l="es">40 millas alrededor de Tampa</span><span data-l="en">40 miles around Tampa</span></li>
+      <li><i class="bi bi-translate"></i><span data-l="es">Se habla español</span><span data-l="en">English and Spanish</span></li>
+    </ul>
   </div>
 </header>
 
@@ -234,87 +296,77 @@ html.js body{background:var(--asfalto);overflow-x:clip}
   </div>
 </section>
 
-<!-- Showcase -->
-<section class="showcase">
-  <div class="container-fluid p-0">
-    <div class="row g-0">
-      <div class="col-lg-6 order-lg-2 text-white showcase-img showcase-icon d-flex"><i class="bi bi-truck m-auto"></i></div>
-      <div class="col-lg-6 order-lg-1 my-auto showcase-text">
-        <h2 class="mb-4"><span data-l="es">Cómo funciona</span><span data-l="en">How it works</span></h2>
-        <div class="d-flex gap-3 mb-3"><span class="step-num">1</span><p class="lead mb-0"><span data-l="es">Nos llamas o escribes con tu ubicación y el carro.</span><span data-l="en">Call or text us with your location and vehicle.</span></p></div>
-        <div class="d-flex gap-3 mb-3"><span class="step-num">2</span><p class="lead mb-0"><span data-l="es">Buscamos un operador de grúa disponible en Tampa.</span><span data-l="en">We find an available tow operator in Tampa.</span></p></div>
-        <div class="d-flex gap-3"><span class="step-num">3</span><p class="lead mb-0"><span data-l="es">Te confirmamos precio y llegada antes de enviarlo.</span><span data-l="en">We confirm price and arrival before dispatching.</span></p></div>
-      </div>
-    </div>
-    <div class="row g-0">
-      <div class="col-lg-6 text-white showcase-img showcase-icon d-flex"><i class="bi bi-signpost-split-fill m-auto"></i></div>
-      <div class="col-lg-6 my-auto showcase-text">
-        <h2><span data-l="es">Grúa en Tampa y sus vías principales</span><span data-l="en">Towing in Tampa and its main roads</span></h2>
-        <p class="lead mb-0"><span data-l="es">¿Varado en I-275, I-4, I-75, Dale Mabry Hwy y Hillsborough Ave? Llámanos y te conectamos con una grúa cercana.</span><span data-l="en">Stuck on I-275, I-4, I-75, Dale Mabry Hwy and Hillsborough Ave? Call us and we connect you with a nearby tow truck.</span></p>
-      </div>
+<!-- How it works -->
+<section class="vl-how" id="como-funciona">
+  <div class="vl-wrap vl-how-grid">
+    <h2 class="vl-h2"><span data-l="es">Cómo funciona</span><span data-l="en">How it works</span></h2>
+    <ol class="vl-steps">
+      <li><span class="vl-step-n">1</span><div><h3><span data-l="es">Nos llamas o escribes</span><span data-l="en">Call or message us</span></h3><p><span data-l="es">Dinos dónde estás y qué carro es.</span><span data-l="en">Tell us where you are and what car it is.</span></p></div></li>
+      <li><span class="vl-step-n">2</span><div><h3><span data-l="es">Buscamos una grúa cerca</span><span data-l="en">We find a nearby truck</span></h3><p><span data-l="es">Un operador local, disponible en tu zona.</span><span data-l="en">A local operator available in your area.</span></p></div></li>
+      <li><span class="vl-step-n">3</span><div><h3><span data-l="es">Te damos el precio</span><span data-l="en">We give you the price</span></h3><p><span data-l="es">Precio y llegada confirmados antes de enviarla. Tú decides.</span><span data-l="en">Price and arrival confirmed before it is sent. You decide.</span></p></div></li>
+    </ol>
+  </div>
+  <div class="vl-wrap">
+    <div class="vl-ready">
+      <p class="vl-ready-t"><span data-l="es">Ten esto a mano cuando llames</span><span data-l="en">Have this ready when you call</span></p>
+      <ul>
+        <li><i class="bi bi-geo-alt-fill"></i><span data-l="es">Dónde estás</span><span data-l="en">Your location</span></li>
+        <li><i class="bi bi-car-front-fill"></i><span data-l="es">Marca y modelo</span><span data-l="en">Make and model</span></li>
+        <li><i class="bi bi-exclamation-triangle-fill"></i><span data-l="es">Qué le pasó</span><span data-l="en">What happened</span></li>
+        <li><i class="bi bi-signpost-2-fill"></i><span data-l="es">A dónde lo llevamos</span><span data-l="en">Where it goes</span></li>
+      </ul>
     </div>
   </div>
 </section>
 
 <!-- Service area -->
-<section class="py-5 bg-light">
-  <div class="container">
-    <h2 class="text-center mb-4"><span data-l="es">Área de servicio: 40 millas alrededor de Tampa</span><span data-l="en">Service area: 40 miles around Tampa</span></h2>
-    <ul class="area-list list-unstyled lead mx-auto" style="max-width:52rem"><li>Tampa</li><li>Brandon</li><li>Riverview</li><li>Valrico</li><li>Seffner</li><li>Temple Terrace</li><li>Carrollwood</li><li>Town 'n' Country</li><li>Lutz</li><li>Land O' Lakes</li><li>Wesley Chapel</li><li>Zephyrhills</li><li>Odessa</li><li>Oldsmar</li><li>Ruskin</li><li>Apollo Beach</li><li>Gibsonton</li><li>Plant City</li><li>Lakeland</li><li>Clearwater</li><li>Largo</li><li>Pinellas Park</li><li>St. Petersburg</li><li>Palm Harbor</li><li>Dunedin</li><li>New Port Richey</li></ul>
+<section class="vl-area" id="area">
+  <div class="vl-wrap">
+    <h2 class="vl-h2"><span data-l="es">Dónde trabajamos</span><span data-l="en">Where we work</span></h2>
+    <p class="vl-lead"><span data-l="es">Hasta 40 millas alrededor de Tampa, incluidas I-275, I-4, I-75, Dale Mabry Hwy y Hillsborough Ave.</span><span data-l="en">Up to 40 miles around Tampa, including I-275, I-4, I-75, Dale Mabry Hwy and Hillsborough Ave.</span></p>
+    <nav class="vl-cities" aria-label="Ciudades"><a href="./">Tampa</a><a href="brandon">Brandon</a><a href="riverview">Riverview</a><a href="wesley-chapel">Wesley Chapel</a><a href="clearwater">Clearwater</a><a href="st-petersburg">St. Petersburg</a><a href="plant-city">Plant City</a><a href="lakeland">Lakeland</a></nav>
+    <p class="vl-more"><span data-l="es">También</span><span data-l="en">Also</span>: Valrico, Seffner, Temple Terrace, Carrollwood, Town 'n' Country, Lutz, Land O' Lakes, Zephyrhills, Odessa, Oldsmar, Ruskin, Apollo Beach, Gibsonton, Largo, Pinellas Park, Palm Harbor, Dunedin, New Port Richey.</p>
   </div>
 </section>
 
 <!-- For shops -->
-<section class="py-5">
-  <div class="container text-center" style="max-width:48rem">
-    <h2 class="mb-3"><i class="bi bi-tools text-primary"></i> <span data-l="es">¿Tienes un taller o negocio?</span><span data-l="en">Own a repair shop or business?</span></h2>
-    <p class="lead mb-0"><span data-l="es">Cuando un cliente tuyo necesite grúa, llámanos al (813) 785-2827 y le mandamos una grúa local con precio confirmado.</span><span data-l="en">When your customer needs a tow, call (813) 785-2827 and we send a local truck with a confirmed price.</span></p>
+<section class="vl-biz">
+  <div class="vl-wrap vl-biz-grid">
+    <div>
+      <h2 class="vl-h2"><span data-l="es">¿Tienes un taller o negocio?</span><span data-l="en">Own a repair shop or business?</span></h2>
+      <p><span data-l="es">Cuando un cliente tuyo necesite grúa, llámanos y le mandamos una grúa local con el precio confirmado.</span><span data-l="en">When your customer needs a tow, call us and we send a local truck with a confirmed price.</span></p>
+    </div>
+    <a class="vl-btn-dark" data-track="call" href="tel:+18137852827"><i class="bi bi-telephone-fill"></i> (813) 785-2827</a>
   </div>
 </section>
 
-<!-- Have ready + FAQ -->
-<section class="py-5 bg-light">
-  <div class="container" style="max-width:52rem">
-    <h2 class="text-center mb-4"><span data-l="es">Ten esto a mano cuando llames</span><span data-l="en">Have this ready when you call</span></h2>
-    <div class="row g-3 mb-5 text-center">
-      <div class="col-6 col-md-3"><i class="bi bi-geo-alt-fill fs-2 text-primary"></i><p class="mb-0"><span data-l="es">Dónde estás</span><span data-l="en">Your location</span></p></div>
-      <div class="col-6 col-md-3"><i class="bi bi-car-front-fill fs-2 text-primary"></i><p class="mb-0"><span data-l="es">Marca y modelo</span><span data-l="en">Make and model</span></p></div>
-      <div class="col-6 col-md-3"><i class="bi bi-exclamation-triangle-fill fs-2 text-primary"></i><p class="mb-0"><span data-l="es">Qué le pasó</span><span data-l="en">What happened</span></p></div>
-      <div class="col-6 col-md-3"><i class="bi bi-signpost-2-fill fs-2 text-primary"></i><p class="mb-0"><span data-l="es">A dónde lo llevamos</span><span data-l="en">Where it goes</span></p></div>
-    </div>
-    <h2 class="text-center mb-4"><span data-l="es">Preguntas frecuentes</span><span data-l="en">Frequently asked questions</span></h2>
-    <div class="accordion" id="faq">
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q1"><span data-l="es">¿Cuánto cuesta una grúa?</span><span data-l="en">How much does a tow cost?</span></button></h3>
-        <div id="q1" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body"><span data-l="es">Depende de la distancia, el tipo de carro y la situación. Te damos el precio por teléfono antes de enviar la grúa, y tú decides.</span><span data-l="en">It depends on distance, vehicle type and the situation. We give you the price by phone before sending the truck, and you decide.</span></div></div></div>
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q2"><span data-l="es">¿Quién hace el remolque?</span><span data-l="en">Who does the towing?</span></button></h3>
-        <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body"><span data-l="es">Somos un despacho. El remolque lo hace un operador de grúa independiente de la zona, con su propia licencia y seguro.</span><span data-l="en">We are a dispatch service. The tow is done by an independent local operator with their own license and insurance.</span></div></div></div>
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q3"><span data-l="es">¿Cubren toda la zona de Tampa?</span><span data-l="en">Do you cover all of Tampa?</span></button></h3>
-        <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body"><span data-l="es">Trabajamos en Tampa y hasta unas 40 millas alrededor de Tampa. Llámanos con tu ubicación y te confirmamos si hay grúa disponible.</span><span data-l="en">We work in Tampa and up to about 40 miles around Tampa. Call with your location and we confirm if a truck is available.</span></div></div></div>
-      <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#q4"><span data-l="es">¿Puedo pedir la grúa por WhatsApp?</span><span data-l="en">Can I request a tow on WhatsApp?</span></button></h3>
-        <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faq"><div class="accordion-body"><span data-l="es">Sí. Escríbenos y mándanos tu ubicación desde WhatsApp. Te respondemos con el precio.</span><span data-l="en">Yes. Message us and share your location on WhatsApp. We reply with the price.</span></div></div></div>
+<!-- FAQ -->
+<section class="vl-faq" id="preguntas">
+  <div class="vl-wrap vl-faq-grid">
+    <h2 class="vl-h2"><span data-l="es">Preguntas frecuentes</span><span data-l="en">Frequently asked questions</span></h2>
+    <div>
+      <details><summary><span data-l="es">¿Cuánto cuesta una grúa?</span><span data-l="en">How much does a tow cost?</span></summary><p><span data-l="es">Depende de la distancia, el tipo de carro y la situación. Te damos el precio por teléfono antes de enviar la grúa, y tú decides.</span><span data-l="en">It depends on distance, vehicle type and the situation. We give you the price by phone before sending the truck, and you decide.</span></p></details>
+      <details><summary><span data-l="es">¿Quién hace el remolque?</span><span data-l="en">Who does the towing?</span></summary><p><span data-l="es">Somos un despacho. El remolque lo hace un operador de grúa independiente de la zona, con su propia licencia y seguro.</span><span data-l="en">We are a dispatch service. The tow is done by an independent local operator with their own license and insurance.</span></p></details>
+      <details><summary><span data-l="es">¿Hasta dónde llegan?</span><span data-l="en">How far do you go?</span></summary><p><span data-l="es">Trabajamos hasta unas 40 millas alrededor de Tampa. Llámanos con tu ubicación y te confirmamos si hay grúa disponible.</span><span data-l="en">We work up to about 40 miles around Tampa. Call us with your location and we confirm if a truck is available.</span></p></details>
+      <details><summary><span data-l="es">¿Puedo pedir la grúa por WhatsApp?</span><span data-l="en">Can I request a tow on WhatsApp?</span></summary><p><span data-l="es">Sí. Escríbenos y mándanos tu ubicación desde WhatsApp. Te respondemos con el precio.</span><span data-l="en">Yes. Message us and share your location on WhatsApp. We reply with the price.</span></p></details>
+      <details><summary><span data-l="es">¿Compran carros chatarra?</span><span data-l="en">Do you buy junk cars?</span></summary><p><span data-l="es">Dinos marca, año y ubicación. Te conectamos con quien lo compra y lo recoge.</span><span data-l="en">Tell us make, year and location. We connect you with a buyer who picks it up.</span></p></details>
     </div>
   </div>
 </section>
 
-<!-- Call to action -->
-<section class="call-to-action text-white text-center" style="--cta-img:url('https://images.unsplash.com/photo-1673187139211-1e7ec3dd60ec?auto=format&fit=crop&w=1920&q=60')">
-  <div class="container position-relative">
-    <h2 class="mb-4"><span data-l="es">¿Necesitas una grúa ahora?</span><span data-l="en">Need a tow right now?</span></h2>
-    <div class="d-grid gap-3 d-sm-flex justify-content-sm-center">
-      <a class="btn btn-primary btn-xl" data-track="call" href="tel:+18137852827"><i class="bi bi-telephone-fill"></i> (813) 785-2827</a>
-      <a class="btn btn-wa btn-xl" data-track="whatsapp" href="https://wa.me/18137852827"><i class="bi bi-whatsapp"></i> WhatsApp</a>
-    </div>
+<!-- Closing call + footer -->
+<section class="vl-end">
+  <div class="vl-wrap">
+    <p class="vl-end-q"><span data-l="es">¿Necesitas una grúa ahora?</span><span data-l="en">Need a tow right now?</span></p>
+    <a class="vl-end-phone" data-track="call" href="tel:+18137852827" aria-label="(813) 785-2827"><span>(813)</span><span>785-2827</span></a>
+    <a class="vl-end-wa" data-track="whatsapp" href="https://wa.me/18137852827"><i class="bi bi-whatsapp"></i> <span data-l="es">O escríbenos por WhatsApp</span><span data-l="en">Or message us on WhatsApp</span></a>
   </div>
+  <footer class="vl-foot vl-wrap">
+    <nav class="vl-foot-links" aria-label="Grúa por ciudad"><a href="./"><span data-l="es">Grúa en Tampa</span><span data-l="en">Tow truck Tampa</span></a><a href="brandon"><span data-l="es">Grúa en Brandon</span><span data-l="en">Tow truck Brandon</span></a><a href="riverview"><span data-l="es">Grúa en Riverview</span><span data-l="en">Tow truck Riverview</span></a><a href="wesley-chapel"><span data-l="es">Grúa en Wesley Chapel</span><span data-l="en">Tow truck Wesley Chapel</span></a><a href="clearwater"><span data-l="es">Grúa en Clearwater</span><span data-l="en">Tow truck Clearwater</span></a><a href="st-petersburg"><span data-l="es">Grúa en St. Petersburg</span><span data-l="en">Tow truck St. Petersburg</span></a><a href="plant-city"><span data-l="es">Grúa en Plant City</span><span data-l="en">Tow truck Plant City</span></a><a href="lakeland"><span data-l="es">Grúa en Lakeland</span><span data-l="en">Tow truck Lakeland</span></a></nav>
+    <p><span data-l="es">Somos un servicio de despacho. El remolque lo realizan operadores de grúa independientes, con licencia y seguro propios. Confirmamos precio y tiempo antes de enviarlos.</span><span data-l="en">We are a dispatch service. Towing is performed by independent tow operators with their own license and insurance. We confirm price and time before dispatching.</span></p>
+    <p>&copy; Mishigang Towing, <span data-l="es">operado por</span><span data-l="en">operated by</span> Mishiganguniversal, LLC (Florida). <a href="mailto:info@mishigangtowing.com">info@mishigangtowing.com</a></p>
+  </footer>
 </section>
-
-<!-- Footer -->
-<footer class="footer bg-light">
-  <div class="container">
-    <ul class="list-inline mb-3 text-center"><li class="list-inline-item"><a href="./"><span data-l="es">Grúa en Tampa</span><span data-l="en">Tow truck Tampa</span></a></li><li class="list-inline-item"><a href="brandon"><span data-l="es">Grúa en Brandon</span><span data-l="en">Tow truck Brandon</span></a></li><li class="list-inline-item"><a href="riverview"><span data-l="es">Grúa en Riverview</span><span data-l="en">Tow truck Riverview</span></a></li><li class="list-inline-item"><a href="wesley-chapel"><span data-l="es">Grúa en Wesley Chapel</span><span data-l="en">Tow truck Wesley Chapel</span></a></li><li class="list-inline-item"><a href="clearwater"><span data-l="es">Grúa en Clearwater</span><span data-l="en">Tow truck Clearwater</span></a></li><li class="list-inline-item"><a href="st-petersburg"><span data-l="es">Grúa en St. Petersburg</span><span data-l="en">Tow truck St. Petersburg</span></a></li><li class="list-inline-item"><a href="plant-city"><span data-l="es">Grúa en Plant City</span><span data-l="en">Tow truck Plant City</span></a></li><li class="list-inline-item"><a href="lakeland"><span data-l="es">Grúa en Lakeland</span><span data-l="en">Tow truck Lakeland</span></a></li></ul>
-    <p class="disclosure text-center mb-2"><span data-l="es">Somos un servicio de despacho. El remolque lo realizan operadores de grúa independientes, con licencia y seguro propios. Confirmamos precio y tiempo antes de enviarlos.</span><span data-l="en">We are a dispatch service. Towing is performed by independent tow operators with their own license and insurance. We confirm price and time before dispatching.</span></p>
-    <p class="text-muted small text-center mb-0">&copy; Mishigang Towing, <span data-l="es">operado por</span><span data-l="en">operated by</span> Mishiganguniversal, LLC (Florida) · Tampa, FL · <a href="tel:+18137852827" data-track="call">(813) 785-2827</a> · <span data-l="es">Fotos</span><span data-l="en">Photos</span>: Unsplash</p>
-  </div>
-</footer>
 
 <!-- Mobile call bar -->
 <div class="mobile-bar d-flex">
@@ -376,8 +428,9 @@ html.js body{background:var(--asfalto);overflow-x:clip}
     document.querySelectorAll('.truck-svg .wheel').forEach(function(w){ w.style.transform = 'rotate(' + rot + 'deg)'; });
     // nav color over dark sections
     var onDark = false;
-    [document.getElementById('vlS2'), gal].forEach(function(el){ var r = el.getBoundingClientRect(); if (r.top <= 0 && r.bottom > 0) onDark = true; });
+    [document.getElementById('vlS2'), gal, document.querySelector('.vl-area'), document.querySelector('.vl-end')].forEach(function(el){ var r = el.getBoundingClientRect(); if (r.top <= 40 && r.bottom > 40) onDark = true; });
     nav.classList.toggle('on-dark', onDark);
+    nav.classList.toggle('solid', sy > 40);
   }
   window.addEventListener('scroll', function(){ if (ready) update(); }, { passive: true });
   window.addEventListener('resize', function(){ if (ready) update(); });
