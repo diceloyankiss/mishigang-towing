@@ -19,6 +19,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
 <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet" />
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+<script>document.documentElement.classList.add("js")</script>
 <style>
 /* Start Bootstrap Landing Page v6.0.6 section styles (MIT) + Mishigang colors */
 :root{--bs-primary:#f5a700;--bs-primary-rgb:245,167,0}
@@ -64,67 +66,170 @@ footer a{color:inherit}
 .disclosure{font-size:.85rem;color:#6c757d}
 .showcase-icon{background:linear-gradient(135deg,#15171c 0%,#2b2f38 100%);min-height:22rem!important}
 .showcase-icon i{font-size:9rem;color:#f5a700;opacity:.9}
+
+:root{--asfalto:#e3e4e0;--tinta:#15171c;--ambar:#f5a700;--oscuro:#1b1d22}
+html.js body{background:var(--asfalto);overflow-x:clip}
+.vl-pre,.vl-hero,.vl-nav,.vl-s2-wrap,.vl-gal{font-family:'Inter',sans-serif}
+.vl-pre{display:none;position:fixed;inset:0;z-index:100;background:var(--tinta);align-items:center;justify-content:center;color:#fff;font:700 2.6rem 'Syne',sans-serif;letter-spacing:-.02em;transition:transform 1.1s cubic-bezier(.45,0,.15,1)}
+.js .vl-pre{display:flex}
+.vl-pre.lift{transform:translateY(-100%)}.vl-pre.parked{display:none}
+.vl-type .dot{color:var(--ambar);font-weight:800}
+.vl-caret{display:inline-block;width:3px;height:1.1em;margin-left:4px;background:#fff;border-radius:2px;animation:vlblink .7s step-end infinite}
+@keyframes vlblink{50%{opacity:0}}
+.vl-nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(16px,4vw,64px);color:var(--tinta);transition:color .35s ease}
+.vl-nav.on-dark{color:#fff}
+.vl-logo{font:700 1.35rem 'Syne',sans-serif;color:inherit;text-decoration:none;letter-spacing:-.02em}.vl-logo span{font-weight:800;color:var(--ambar)}
+.vl-nav-right{display:flex;align-items:center;gap:10px}
+.vl-lang{background:transparent;border:1px solid currentColor;color:inherit;border-radius:999px;padding:6px 12px;font:600 .8rem 'Inter',sans-serif;cursor:pointer}
+.vl-callpill{background:var(--ambar);color:var(--tinta);font:700 .95rem 'Inter',sans-serif;text-decoration:none;border-radius:999px;padding:9px 16px;white-space:nowrap}
+.vl-callpill:hover{background:#ffbb2e;color:var(--tinta)}
+.vl-lang:focus-visible,.vl-callpill:focus-visible,.vl-tile:focus-visible{outline:3px solid var(--tinta);outline-offset:3px}
+.vl-hero{position:relative;min-height:100vh;min-height:100svh;overflow:visible;background:var(--asfalto)}
+.vl-hero-bg{position:absolute;inset:0;background:var(--hero-img) center/cover no-repeat;filter:grayscale(1) contrast(.9);opacity:.28}
+.vl-hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,var(--asfalto) 0%,rgba(227,228,224,0) 35%,rgba(227,228,224,0) 70%,var(--asfalto) 100%)}
+.vl-hero-text{position:relative;z-index:30;padding-top:calc(24vh - 40px);opacity:1}
+.js .vl-hero-text{opacity:0;transform:translateY(-28px)}
+.js .vl-hero-text.show{opacity:1;transform:none;transition:opacity .7s cubic-bezier(.22,1,.36,1) .1s,transform .7s cubic-bezier(.22,1,.36,1) .1s}
+.vl-top{display:flex;justify-content:space-between;align-items:flex-end;padding:0 clamp(16px,4vw,64px);margin-bottom:-.04em}
+.vl-own{margin:0;font:800 3vw 'Syne',sans-serif;text-transform:uppercase;letter-spacing:-.03em;line-height:1;color:var(--tinta)}
+.vl-sub-d{margin:0 0 .2em;text-align:right;font:700 clamp(10px,.95vw,14px) 'Syne',sans-serif;opacity:.7;line-height:1.6;letter-spacing:.02em;max-width:300px}
+.vl-sub-m{display:none;margin:.9em 0 0;padding:0 clamp(16px,4vw,64px);font:600 clamp(13px,3vw,16px) 'Syne',sans-serif;opacity:.7;max-width:34rem}
+.vl-big{margin:0;padding:0 clamp(16px,4vw,64px);font:800 clamp(80px,17vw,300px) 'Syne',sans-serif;text-transform:uppercase;letter-spacing:-.04em;line-height:.88;color:var(--tinta);white-space:nowrap}
+.vl-cta{display:flex;flex-wrap:wrap;gap:12px;padding:clamp(20px,3vw,36px) clamp(16px,4vw,64px) 0}
+.vl-cta .btn{margin:0}
+@media(max-width:1023px){.vl-sub-d{display:none}.vl-sub-m{display:block}.vl-top{justify-content:flex-start}.vl-own{font-size:5.5vw}.vl-hero-text{padding-top:110px}.vl-big{font-size:clamp(64px,22vw,180px)}}
+@media(max-width:639px){.vl-big{font-size:17.5vw}.vl-own{font-size:7vw}.vl-hero-text{padding-top:90px}.vl-callpill{padding:8px 12px;font-size:.85rem}.vl-lang{padding:6px 9px}.vl-cta{flex-direction:column}.vl-cta .btn{width:100%}}
+.vl-truck{position:fixed;z-index:22;bottom:0;left:0;width:100%;pointer-events:none;will-change:transform;display:none}
+.js .vl-truck{display:block}
+.vl-truck-in{transform:translateY(102vh);will-change:transform}
+.vl-truck-in.rise{transform:none;transition:transform 1.2s cubic-bezier(.45,0,.15,1) .3s}
+.vl-truck-in.free{transition:none}
+.truck-svg{display:block;width:100%;height:auto;overflow:visible}
+.vl-s2-wrap{position:relative;height:300vh;z-index:20}
+.vl-s2-spacer{height:4vh;background:var(--asfalto)}
+.vl-s2{position:sticky;top:0;height:100vh;background:var(--oscuro);overflow:hidden}
+.vl-s2-content{display:flex;flex-direction:column;padding:clamp(80px,9vw,130px) clamp(16px,4vw,64px) 0}
+.vl-statement,.vl-stats{box-sizing:border-box}.vl-statement{max-width:1200px;margin:0 auto;padding-left:25%;font:300 clamp(20px,2.6vw,42px)/1.35 'Inter',sans-serif;color:#e8e4df;letter-spacing:-.02em;white-space:nowrap;width:100%}
+.vl-stats{display:flex;max-width:1200px;width:100%;margin:clamp(40px,5vw,72px) auto 0;padding-left:25%}
+.vl-stat{flex:1 1 0%;min-width:0}.vl-stat+.vl-stat{border-left:1px solid rgba(255,255,255,.2);padding-left:clamp(16px,2.5vw,40px)}
+.vl-num{font:300 clamp(36px,4.5vw,72px)/1.1 'Inter',sans-serif;color:#fff}.vl-num small{font-size:.4em;margin-left:.15em;color:var(--ambar);font-weight:600}
+.vl-lbl{margin-top:clamp(4px,.5vw,8px);font:400 clamp(12px,1.1vw,16px) 'Inter',sans-serif;color:rgba(255,255,255,.6)}
+@media(max-width:767px){.vl-statement,.vl-stats{padding-left:0}.vl-statement{white-space:normal;font-size:clamp(19px,5.2vw,26px)}.vl-statement br{display:none}}
+@media(min-width:768px) and (max-width:1023px){.vl-statement,.vl-stats{padding-left:15%}.vl-statement{white-space:normal}.vl-statement br{display:none}}
+.vl-gal{position:relative;z-index:25;margin-top:-100vh;background:var(--oscuro);height:100vh;overflow:hidden}
+.vl-ticker{position:absolute;inset:0;display:flex;align-items:center;overflow:hidden;z-index:0;pointer-events:none}
+.vl-ticker-track{display:flex;white-space:nowrap;animation:vlmarq 40s linear infinite}
+.vl-ticker-track span{font:800 clamp(100px,14vw,220px) 'Syne',sans-serif;color:#fff;opacity:.06;letter-spacing:-.02em;user-select:none;padding-right:.3em}
+@keyframes vlmarq{to{transform:translateX(-50%)}}
+.vl-gal-content{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;height:100%;padding:clamp(24px,4vw,60px)}
+.vl-row{display:flex;gap:6px;height:70%;width:100%;max-width:1200px}
+.vl-tile{position:relative;flex:1 1 0%;height:100%;border-radius:12px;overflow:hidden;cursor:pointer;color:#fff;text-decoration:none;background:var(--img) center/cover;transition:flex .5s cubic-bezier(.4,0,.2,1);display:flex;flex-direction:column;justify-content:flex-end;padding:20px}
+.vl-tile::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(21,23,28,.35),rgba(21,23,28,.9))}
+.vl-tile>*{position:relative}
+.vl-tile i{font-size:1.6rem;color:var(--ambar);margin-bottom:10px}
+.vl-tile h3{margin:0;font:800 clamp(16px,1.6vw,22px)/1.1 'Syne',sans-serif;letter-spacing:-.01em}
+.vl-tile p{margin:8px 0 0;font:400 .92rem/1.4 'Inter',sans-serif;max-width:22ch;opacity:0;max-height:0;overflow:hidden;transition:opacity .4s ease .1s}
+.vl-tile:hover,.vl-tile:focus-visible{flex:4}.vl-tile:hover p,.vl-tile:focus-visible p{opacity:.85;max-height:6em}
+@media(max-width:1023px){
+.vl-gal{height:auto;min-height:100vh;overflow:visible}
+.vl-ticker{position:sticky;top:0;height:100vh;width:100%;margin-bottom:-100vh}
+.vl-gal-content{height:auto;align-items:flex-start;padding:80px 16px 60px}
+.vl-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;height:auto;max-width:700px}
+.vl-tile{flex:none;height:auto;aspect-ratio:4/5;border-radius:10px;padding:14px}
+.vl-tile p{opacity:.85;max-height:6em;font-size:.85rem}
+.vl-tile:hover{flex:none;transform:scale(1.02)}
+.vl-tile:last-child:nth-child(odd){grid-column:1/-1;max-width:calc(50% - 4px);justify-self:center}}
+@media(prefers-reduced-motion:reduce){.vl-ticker-track{animation:none}.vl-pre{display:none!important}.js .vl-hero-text{opacity:1;transform:none}.vl-tile,.vl-truck-in{transition:none}}
 </style>
 </head>
 <body>
+<!-- Preloader -->
+<div class="vl-pre" id="vlPre" aria-hidden="true"><span class="vl-type" id="vlType"></span><span class="vl-caret" id="vlCaret"></span></div>
+
 <!-- Navigation -->
-<nav class="navbar navbar-dark bg-dark static-top">
-  <div class="container">
-    <a class="navbar-brand" href="./"><i class="bi bi-truck"></i> MISHIGANG TOWING</a>
-    <div class="d-flex align-items-center gap-2">
-      <button class="btn btn-outline-light btn-sm lang-btn" id="langBtn" type="button" aria-label="Cambiar idioma / Change language">ES / EN</button>
-      <a class="btn btn-primary d-none d-sm-inline-block fw-bold" data-track="call" href="tel:+18137852827"><i class="bi bi-telephone-fill"></i> (813) 785-2827</a>
-    </div>
+<nav class="vl-nav" id="vlNav">
+  <a class="vl-logo" href="./" aria-label="Mishigang Towing">Mishigang<span>.</span></a>
+  <div class="vl-nav-right">
+    <button class="vl-lang" id="langBtn" type="button" aria-label="Cambiar idioma / Change language">ES / EN</button>
+    <a class="vl-callpill" data-track="call" href="tel:+18137852827"><i class="bi bi-telephone-fill"></i> (813) 785-2827</a>
   </div>
 </nav>
 
-<!-- Masthead -->
-<header class="masthead" style="--hero-img:url('https://images.unsplash.com/photo-1673187139211-1e7ec3dd60ec?auto=format&fit=crop&w=1920&q=70')">
-  <div class="container position-relative">
-    <div class="row justify-content-center">
-      <div class="col-xl-8 text-center text-white">
-        <h1 class="mb-3"><span data-l="es">¿Necesitas grúa en Tampa? Llama ahora</span><span data-l="en">Need a tow truck in Tampa? Call now</span></h1>
-        <p class="lead mb-4"><span data-l="es">Te conectamos con una grúa local y te decimos el precio antes de enviarla. Sin sorpresas.</span><span data-l="en">We connect you with a local tow truck and tell you the price before it's sent. No surprises.</span></p>
-        <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mb-4">
-          <a class="btn btn-primary btn-xl" data-track="call" href="tel:+18137852827"><i class="bi bi-telephone-fill"></i> <span data-l="es">Llamar</span><span data-l="en">Call</span> (813) 785-2827</a>
-          <a class="btn btn-wa btn-xl" data-track="whatsapp" href="https://wa.me/18137852827"><i class="bi bi-whatsapp"></i> <span data-l="es">Pedir grúa por WhatsApp</span><span data-l="en">Request a tow on WhatsApp</span></a>
-        </div>
-        <div class="d-flex flex-wrap justify-content-center gap-2">
-          <span class="badge-soft"><i class="bi bi-cash-coin"></i> <span data-l="es">Precio confirmado antes</span><span data-l="en">Price confirmed upfront</span></span>
-          <span class="badge-soft"><i class="bi bi-geo-alt-fill"></i> <span data-l="es">40 millas alrededor de Tampa</span><span data-l="en">40 miles around Tampa</span></span>
-          <span class="badge-soft"><i class="bi bi-translate"></i> Español · English</span>
-        </div>
-      </div>
+<!-- Hero -->
+<header class="vl-hero" id="vlHero" style="--hero-img:url('https://images.unsplash.com/photo-1673187139211-1e7ec3dd60ec?auto=format&fit=crop&w=1920&q=70')">
+  <div class="vl-hero-bg"></div>
+  <div class="vl-hero-text" id="vlHeroText">
+    <div class="vl-top">
+      <p class="vl-own"><span data-l="es">¿Varado en Tampa?</span><span data-l="en">Stranded in Tampa?</span></p>
+      <p class="vl-sub-d"><span data-l="es">Despacho de grúas locales.<br>Te confirmamos el precio<br>antes de enviarla.</span><span data-l="en">Local tow dispatch.<br>We confirm the price<br>before it is sent.</span></p>
+    </div>
+    <h1 class="vl-big"><span data-l="es">GRÚA YA.</span><span data-l="en">TOW NOW.</span><span class="visually-hidden"><span data-l="es"> Grúa en Tampa, FL</span><span data-l="en"> Tow truck in Tampa, FL</span></span></h1>
+    <p class="vl-sub-m"><span data-l="es">Despacho de grúas locales. Te confirmamos el precio antes de enviarla.</span><span data-l="en">Local tow dispatch. We confirm the price before it is sent.</span></p>
+    <div class="vl-cta">
+      <a class="btn btn-primary btn-xl" data-track="call" href="tel:+18137852827"><i class="bi bi-telephone-fill"></i> <span data-l="es">Llamar</span><span data-l="en">Call</span> (813) 785-2827</a>
+      <a class="btn btn-wa btn-xl" data-track="whatsapp" href="https://wa.me/18137852827"><i class="bi bi-whatsapp"></i> <span data-l="es">Pedir por WhatsApp</span><span data-l="en">Request on WhatsApp</span></a>
     </div>
   </div>
 </header>
 
-<!-- Services -->
-<section class="features-icons bg-light text-center">
-  <div class="container">
-    <h2 class="mb-5"><span data-l="es">Servicios</span><span data-l="en">Services</span></h2>
-    <div class="row">
-      <div class="col-lg-4">
-        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-          <div class="features-icons-icon d-flex"><i class="bi bi-truck m-auto text-primary"></i></div>
-          <h3><span data-l="es">Remolque de carros</span><span data-l="en">Vehicle towing</span></h3>
-          <p class="lead mb-0"><span data-l="es">Carro que no arranca, choque o avería: te mandamos una grúa local.</span><span data-l="en">Car won't start, accident or breakdown: we send a local tow truck.</span></p>
-        </div>
+<!-- Scroll-driven truck -->
+<div class="vl-truck" id="vlTruck" aria-hidden="true"><div class="vl-truck-in" id="vlTruckIn"><svg class="truck-svg" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+  <ellipse cx="400" cy="283" rx="380" ry="12" fill="#000" opacity=".18"/>
+  <!-- carried car -->
+  <g>
+    <path d="M70 178 L100 138 Q108 128 124 128 L250 128 Q270 128 282 142 L318 178 Z" fill="#3a3f4a"/>
+    <path d="M112 172 L128 142 L190 142 L190 172 Z M202 172 L202 142 L254 142 L282 172 Z" fill="#cfd6df" opacity=".85"/>
+    <rect x="52" y="172" width="290" height="26" rx="8" fill="#3a3f4a"/>
+    <circle cx="112" cy="198" r="21" fill="#15171c"/><circle cx="288" cy="198" r="21" fill="#15171c"/>
+    <circle cx="112" cy="198" r="9" fill="#9aa1ad"/><circle cx="288" cy="198" r="9" fill="#9aa1ad"/>
+  </g>
+  <!-- flatbed -->
+  <rect x="14" y="214" width="548" height="22" rx="4" fill="#15171c"/>
+  <rect x="14" y="204" width="20" height="12" rx="2" fill="#f5a700"/>
+  <rect x="530" y="150" width="32" height="64" rx="3" fill="#15171c"/>
+  <rect x="536" y="160" width="20" height="8" fill="#f5a700"/><rect x="536" y="178" width="20" height="8" fill="#f5a700"/>
+  <!-- cab -->
+  <path d="M572 236 L572 96 Q572 84 584 84 L690 84 Q704 84 714 98 L742 150 L772 156 Q786 158 786 172 L786 236 Z" fill="#f5a700"/>
+  <path d="M594 100 L594 150 L696 150 L676 106 Q672 100 664 100 Z" fill="#15171c"/>
+  <path d="M604 108 L604 142 L680 142 L666 112 Z" fill="#9fc6e0" opacity=".9"/>
+  <rect x="580" y="164" width="196" height="6" fill="#15171c" opacity=".25"/>
+  <rect x="770" y="186" width="16" height="14" rx="3" fill="#fff6cf"/>
+  <rect x="776" y="214" width="14" height="14" rx="2" fill="#15171c"/>
+  <!-- beacon -->
+  <rect x="610" y="70" width="64" height="14" rx="4" fill="#15171c"/>
+  <rect x="616" y="58" width="22" height="12" rx="4" fill="#ff7a00"/><rect x="646" y="58" width="22" height="12" rx="4" fill="#ff7a00"/>
+  <!-- wheels -->
+  <g class="wheel" style="transform-origin:130px 246px;transform-box:view-box"><circle cx="130" cy="246" r="40" fill="#15171c"/><circle cx="130" cy="246" r="18" fill="#9aa1ad"/><path d="M130 210v72M94 246h72M104 220l52 52M156 220l-52 52" stroke="#15171c" stroke-width="5"/></g>
+  <g class="wheel" style="transform-origin:236px 246px;transform-box:view-box"><circle cx="236" cy="246" r="40" fill="#15171c"/><circle cx="236" cy="246" r="18" fill="#9aa1ad"/><path d="M236 210v72M200 246h72M210 220l52 52M262 220l-52 52" stroke="#15171c" stroke-width="5"/></g>
+  <g class="wheel" style="transform-origin:640px 246px;transform-box:view-box"><circle cx="640" cy="246" r="40" fill="#15171c"/><circle cx="640" cy="246" r="18" fill="#9aa1ad"/><path d="M640 210v72M604 246h72M614 220l52 52M666 220l-52 52" stroke="#15171c" stroke-width="5"/></g>
+</svg></div></div>
+
+<!-- Dark statement + stats -->
+<div class="vl-s2-wrap" id="vlS2Wrap">
+  <div class="vl-s2-spacer"></div>
+  <section class="vl-s2" id="vlS2">
+    <div class="vl-s2-content">
+      <p class="vl-statement"><span data-l="es">Cada llamada empieza igual: <br>dónde estás, qué le pasó al carro <br>y a dónde lo llevamos. Con eso <br>buscamos una grúa local, te damos <br>el precio y tú decides.</span><span data-l="en">Every call starts the same way: <br>where you are, what happened to the car <br>and where it needs to go. With that <br>we find a local truck, give you <br>the price, and you decide.</span></p>
+      <div class="vl-stats">
+        <div class="vl-stat"><div class="vl-num"><span class="vl-count" data-end="40">0</span><small>mi</small></div><div class="vl-lbl"><span data-l="es">Radio alrededor de Tampa</span><span data-l="en">Radius around Tampa</span></div></div>
+        <div class="vl-stat"><div class="vl-num"><span class="vl-count" data-end="26">0</span></div><div class="vl-lbl"><span data-l="es">Zonas de servicio</span><span data-l="en">Service areas</span></div></div>
+        <div class="vl-stat"><div class="vl-num"><span class="vl-count" data-end="8">0</span></div><div class="vl-lbl"><span data-l="es">Ciudades principales</span><span data-l="en">Main cities</span></div></div>
       </div>
-      <div class="col-lg-4">
-        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
-          <div class="features-icons-icon d-flex"><i class="bi bi-cash-stack m-auto text-primary"></i></div>
-          <h3><span data-l="es">Compra de carros chatarra</span><span data-l="en">Cash for junk cars</span></h3>
-          <p class="lead mb-0"><span data-l="es">Dinos marca, año y ubicación. Te conectamos con quien lo compra y lo recoge.</span><span data-l="en">Tell us make, year and location. We connect you with a buyer who picks it up.</span></p>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="features-icons-item mx-auto mb-0 mb-lg-3">
-          <div class="features-icons-icon d-flex"><i class="bi bi-shield-check m-auto text-primary"></i></div>
-          <h3><span data-l="es">Sin sorpresas</span><span data-l="en">No surprises</span></h3>
-          <p class="lead mb-0"><span data-l="es">Precio y tiempo de llegada confirmados antes de enviar la grúa.</span><span data-l="en">Price and ETA confirmed before the truck is dispatched.</span></p>
-        </div>
-      </div>
+    </div>
+  </section>
+</div>
+
+<!-- Service gallery -->
+<section class="vl-gal" id="vlGal">
+  <div class="vl-ticker" aria-hidden="true"><div class="vl-ticker-track"><span>Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;</span><span>Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;Mishigang.&nbsp;&nbsp;&nbsp;</span></div></div>
+  <div class="vl-gal-content">
+    <h2 class="visually-hidden"><span data-l="es">Servicios</span><span data-l="en">Services</span></h2>
+    <div class="vl-row">
+      <a class="vl-tile" style="--img:url('https://images.unsplash.com/photo-1730514784243-f0e7f09c9f50?auto=format&fit=crop&w=1200&q=70')" href="tel:+18137852827" data-track="call"><i class="bi bi-truck"></i><h3><span data-l="es">Remolque de carros</span><span data-l="en">Vehicle towing</span></h3><p><span data-l="es">Carro que no arranca o averiado: grúa local.</span><span data-l="en">Car won't start or broke down: local tow.</span></p></a>
+      <a class="vl-tile" style="--img:url('https://images.unsplash.com/photo-1738101996177-13110d20a973?auto=format&fit=crop&w=1200&q=70')" href="tel:+18137852827" data-track="call"><i class="bi bi-exclamation-triangle-fill"></i><h3><span data-l="es">Choques y accidentes</span><span data-l="en">Accidents</span></h3><p><span data-l="es">Te ayudamos a mover el carro del lugar.</span><span data-l="en">We help move the car from the scene.</span></p></a>
+      <a class="vl-tile" style="--img:url('https://images.unsplash.com/photo-1673187139211-1e7ec3dd60ec?auto=format&fit=crop&w=1920&q=70')" href="tel:+18137852827" data-track="call"><i class="bi bi-cash-stack"></i><h3><span data-l="es">Compra de chatarra</span><span data-l="en">Cash for junk cars</span></h3><p><span data-l="es">Te conectamos con quien lo compra y lo recoge.</span><span data-l="en">We connect you with a buyer who picks it up.</span></p></a>
+      <a class="vl-tile" style="--img:url('https://images.unsplash.com/photo-1730514784243-f0e7f09c9f50?auto=format&fit=crop&w=1200&q=70')" href="tel:+18137852827" data-track="call"><i class="bi bi-tools"></i><h3><span data-l="es">Talleres y negocios</span><span data-l="en">Shops and businesses</span></h3><p><span data-l="es">Grúa con precio confirmado para tus clientes.</span><span data-l="en">Tow with a confirmed price for your customers.</span></p></a>
+      <a class="vl-tile" style="--img:url('https://images.unsplash.com/photo-1738101996177-13110d20a973?auto=format&fit=crop&w=1200&q=70')" href="https://wa.me/18137852827" data-track="whatsapp"><i class="bi bi-whatsapp"></i><h3><span data-l="es">Pide por WhatsApp</span><span data-l="en">Request on WhatsApp</span></h3><p><span data-l="es">Manda tu ubicación y te respondemos con el precio.</span><span data-l="en">Share your location and we reply with the price.</span></p></a>
     </div>
   </div>
 </section>
@@ -217,6 +322,89 @@ footer a{color:inherit}
   <a class="btn btn-wa" data-track="whatsapp" href="https://wa.me/18137852827"><i class="bi bi-whatsapp"></i> WhatsApp</a>
 </div>
 
+
+<script>
+(function(){
+  var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var pre = document.getElementById('vlPre'), typeEl = document.getElementById('vlType'), caret = document.getElementById('vlCaret');
+  var heroText = document.getElementById('vlHeroText'), truck = document.getElementById('vlTruck'), truckIn = document.getElementById('vlTruckIn');
+  var hero = document.getElementById('vlHero'), wrap = document.getElementById('vlS2Wrap'), gal = document.getElementById('vlGal'), nav = document.getElementById('vlNav');
+  var seen = false; try { seen = sessionStorage.getItem('vlseen') === '1'; } catch(e) {}
+  var ready = false;
+  function finish(){ ready = true; truckIn.classList.add('free'); update(); }
+  function startReveal(fast){
+    heroText.classList.add('show');
+    if (fast) { truckIn.classList.add('free'); truckIn.style.transform = 'none'; ready = true; update(); return; }
+    truckIn.classList.add('rise'); setTimeout(function(){ truckIn.style.transform = 'none'; finish(); }, 1700);
+  }
+  if (reduce || seen) { pre.classList.add('parked'); startReveal(true); }
+  else {
+    var word = 'Mishigang.', i = 0, step = 90, startAt = 400;
+    for (let k = 0; k < word.length; k++) setTimeout(function(){
+      var ch = word[k]; typeEl.innerHTML += ch === '.' ? '<span class="dot">.</span>' : ch;
+    }, startAt + k * step);
+    var lift = startAt + word.length * step + 450;
+    setTimeout(function(){ caret.style.display = 'none'; }, lift - 150);
+    setTimeout(function(){ pre.classList.add('lift'); }, lift);
+    setTimeout(function(){ startReveal(false); }, lift + 600);
+    setTimeout(function(){ pre.classList.add('parked'); }, lift + 1400);
+    try { sessionStorage.setItem('vlseen', '1'); } catch(e) {}
+  }
+  function sm(t){ return t * t * (3 - 2 * t); }
+  function update(){
+    var vw = window.innerWidth, vh = window.innerHeight, mob = vw < 768, small = vw < 1024;
+    var barH = mob ? 62 : 0;
+    var baseW = small ? Math.min(vw * (mob ? .92 : .9), 760) : Math.min(Math.max(vw * .46, 560), 860);
+    var imgH = baseW * 0.375;
+    var sy = window.pageYOffset, heroH = hero.offsetHeight;
+    var hTop = hero.getBoundingClientRect().top + sy;
+    var wTop = wrap.getBoundingClientRect().top + sy, wBot = wTop + wrap.offsetHeight;
+    var start = hTop + heroH * .30, end = wTop + vh * .55;
+    var p = Math.max(0, Math.min(1, (sy - start) / (end - start)));
+    var t = sm(sm(p));
+    var smax = Math.max(1, Math.min(small ? 1.25 : 1.45, (vh * (small ? .30 : .36)) / imgH));
+    var s = 1 + (smax - 1) * t;
+    var x = (vw - baseW * s) / 2 + (small ? 0 : t * vw * .10);
+    var y = vh - barH - imgH * s + Math.min(0, (wBot - sy) - vh);
+    truck.style.height = imgH + 'px';
+    truck.style.top = '0'; truck.style.bottom = 'auto';
+    truckIn.style.width = baseW + 'px';
+    truck.style.transform = 'translate(' + x + 'px,' + y + 'px) scale(' + s + ')';
+    truck.style.transformOrigin = 'top left';
+    truck.style.width = baseW + 'px';
+    var rot = p * 900;
+    document.querySelectorAll('.truck-svg .wheel').forEach(function(w){ w.style.transform = 'rotate(' + rot + 'deg)'; });
+    // nav color over dark sections
+    var onDark = false;
+    [document.getElementById('vlS2'), gal].forEach(function(el){ var r = el.getBoundingClientRect(); if (r.top <= 0 && r.bottom > 0) onDark = true; });
+    nav.classList.toggle('on-dark', onDark);
+  }
+  window.addEventListener('scroll', function(){ if (ready) update(); }, { passive: true });
+  window.addEventListener('resize', function(){ if (ready) update(); });
+  // truck initial placement before reveal
+  (function(){ var vw = window.innerWidth, mob = vw < 768, small = vw < 1024;
+    var baseW = small ? Math.min(vw * (mob ? .92 : .9), 760) : Math.min(Math.max(vw * .46, 560), 860);
+    var imgH = baseW * .375, barH = mob ? 62 : 0;
+    truck.style.width = baseW + 'px'; truck.style.height = imgH + 'px'; truckIn.style.width = baseW + 'px';
+    truck.style.top = '0'; truck.style.transformOrigin = 'top left';
+    truck.style.transform = 'translate(' + ((vw - baseW) / 2) + 'px,' + (window.innerHeight - barH - imgH) + 'px)'; })();
+  // count-up
+  var counted = false;
+  function runCount(){
+    if (counted) return; counted = true;
+    document.querySelectorAll('.vl-count').forEach(function(el){
+      var end = +el.dataset.end, t0 = performance.now();
+      (function tick(now){ var k = Math.min(1, (now - t0) / 2000), e = 1 - Math.pow(1 - k, 3); el.textContent = Math.round(e * end); if (k < 1) requestAnimationFrame(tick); })(t0);
+    });
+  }
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if (e.isIntersecting) runCount(); }); }, { threshold: .3 });
+    io.observe(document.querySelector('.vl-stats'));
+  } else { document.querySelectorAll('.vl-count').forEach(function(el){ el.textContent = el.dataset.end; }); }
+  // no-JS / failure safety: if reveal never fired, show everything
+  setTimeout(function(){ if (!heroText.classList.contains('show')) { heroText.classList.add('show'); pre.classList.add('parked'); truckIn.style.transform = 'none'; ready = true; update(); } }, 6000);
+})();
+</script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 <script>
 var GA4_ID = "";
