@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-<title>Cash for Junk Cars Tampa, FL | Compramos Carros Chatarra | Mishigang Towing</title>
+<title>Cash for Junk Cars Tampa FL | Carros Chatarra | Mishigang</title>
 <meta name="description" content="Sell your junk car in Tampa, FL. Send the VIN and get an offer. Compramos carros chatarra en Tampa: manda el VIN y te damos una oferta. Se habla español." />
 <link rel="canonical" href="https://mishigangtowing.com/compramos-carros-junk" />
-<meta property="og:title" content="Cash for Junk Cars Tampa, FL | Compramos Carros Chatarra | Mishigang Towing" />
+<meta property="og:title" content="Cash for Junk Cars Tampa FL | Carros Chatarra | Mishigang" />
 <meta property="og:description" content="Sell your junk car in Tampa, FL. Send the VIN and get an offer. Compramos carros chatarra en Tampa: manda el VIN y te damos una oferta. Se habla español." />
 <meta property="og:url" content="https://mishigangtowing.com/compramos-carros-junk" />
 <meta property="og:type" content="website" />
@@ -261,7 +261,8 @@ var GA4_ID = "G-X7912V42ED";
       var w = document.getElementById("where").value.trim(); if (w) lines.push(l.where + ": " + w);
       lines.push(l.pics);
       track("junk_vin_submit", { decoded: d ? "yes" : "no" });
-      window.location.href = "https://wa.me/18137852827?text=" + encodeURIComponent(lines.join("\n"));
+      var dest = "https://wa.me/18137852827?text=" + encodeURIComponent(lines.join("\n"));
+      setTimeout(function(){ window.location.href = dest; }, 300);
     };
     if (decodedData) go(decodedData); else decode().then(go);
   });
