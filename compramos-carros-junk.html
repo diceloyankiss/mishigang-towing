@@ -129,6 +129,14 @@ footer a{color:rgba(255,255,255,.85)}
         <label for="where"><span data-l="es">Ciudad o código postal</span><span data-l="en">City or ZIP code</span></label>
         <input id="where" placeholder="Tampa 33604" />
       </div>
+      <div>
+        <label for="cname"><span data-l="es">Tu nombre</span><span data-l="en">Your name</span></label>
+        <input id="cname" autocomplete="name" placeholder="Juan" />
+      </div>
+      <div>
+        <label for="cphone"><span data-l="es">Tu teléfono</span><span data-l="en">Your phone</span></label>
+        <input id="cphone" type="tel" inputmode="tel" autocomplete="tel" placeholder="813-555-1234" />
+      </div>
     </div>
     <div class="actions">
       <button class="btn btn-wa" type="submit" id="sendBtn"><i class="bi bi-whatsapp"></i> <span data-l="es">Enviar por WhatsApp</span><span data-l="en">Send on WhatsApp</span></button>
@@ -261,6 +269,18 @@ var GA4_ID = "G-X7912V42ED";
       var w = document.getElementById("where").value.trim(); if (w) lines.push(l.where + ": " + w);
       lines.push(l.pics);
       track("junk_vin_submit", { decoded: d ? "yes" : "no" });
+      try {
+        fetch("https://mishiganguniversalllc.app.n8n.cloud/webhook/web-chatarra", {
+          method: "POST", mode: "cors", keepalive: true,
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            vin: v, anio: d ? d.year : "", marca: d ? d.make : "", modelo: d ? d.model : "", tipo: d ? (d.body || "") : "",
+            arranca: a, titulo: b, millas: o, zona: w,
+            nombre: document.getElementById("cname").value.trim(),
+            telefono: document.getElementById("cphone").value.trim()
+          })
+        }).catch(function(){});
+      } catch (err) {}
       var dest = "https://wa.me/18137852827?text=" + encodeURIComponent(lines.join("\n"));
       setTimeout(function(){ window.location.href = dest; }, 300);
     };
